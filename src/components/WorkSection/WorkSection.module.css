@@ -1,0 +1,68 @@
+.workSection {
+    min-height: 100vh;
+    padding: 8rem 5vw;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-top: 1px solid var(--border-color);
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: var(--accent-color);
+}
+
+.projectGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grid responsif */
+    gap: 4rem; /* Jarak antar proyek */
+}
+
+.projectCard {
+    background-color: var(--bg-dark);
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projectCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.projectCategory {
+    font-size: 0.9rem;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.projectTitle {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--text-light);
+}
+
+.projectDescription {
+    font-size: 1rem;
+    color: var(--subtle-color); /* Warna abu-abu yang lebih kalem */
+    margin-bottom: 1.5rem;
+}
+
+.projectLink {
+    display: inline-block;
+    color: var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);
+    padding-bottom: 0.2rem;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.projectLink:hover {
+    color: var(--text-light);
+    border-color: var(--text-light);
+}
