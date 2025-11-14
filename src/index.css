@@ -1,0 +1,71 @@
+/* Import fonts dari Google Fonts (sudah di index.html juga, ini untuk jaga-jaga) */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* CSS Reset Minimalis */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Variabel Warna */
+:root {
+  --bg-dark: #121212; /* Hampir hitam */
+  --bg-light: #f0f0f0; /* Hampir putih */
+  --text-dark: #333333;
+  --text-light: #ffffff;
+  --border-color: #555555;
+  --accent-color: #b0b0b0; /* Abu-abu terang untuk aksen */
+
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  scroll-behavior: smooth; /* Untuk smooth-scroll */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  color: var(--text-light);
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
+
+h1 { font-size: 3.5rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 1.8rem; }
+
+p {
+  margin-bottom: 1em;
+}
+
+a {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+/* Scrollbar Styling (Opsional tapi bagus) */
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--border-color);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--accent-color);
+}
