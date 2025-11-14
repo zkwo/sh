@@ -1,0 +1,69 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: flex-end; /* Ikon hamburger di kanan */
+    align-items: center;
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    font-size: 2.5rem; /* Ukuran ikon */
+    color: var(--text-light);
+    cursor: pointer;
+    z-index: 1001; /* Pastikan di atas overlay */
+    transition: color 0.3s ease;
+}
+
+.hamburger:hover {
+    color: var(--accent-color);
+}
+
+.overlayMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(18, 18, 18, 0.95); /* Semi-transparan */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    z-index: 999;
+}
+
+.overlayMenu.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menuList {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.menuItem {
+    margin: 1.5rem 0;
+}
+
+.menuLink {
+    font-family: var(--font-serif);
+    font-size: 2.8rem; /* Ukuran font menu */
+    color: var(--text-light);
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.menuLink:hover {
+    color: var(--accent-color);
+}
